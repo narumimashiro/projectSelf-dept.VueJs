@@ -13,6 +13,11 @@ const routes: Array<RouteConfig> = [
     path: '/profile',
     name: 'profile',
     component: () => import('@/components/main/ProfileView.vue')
+  },
+  {
+    path: '/news',
+    name: 'news',
+    component: () => import('@/components/main/NewsView.vue')
   }
 ]
 
