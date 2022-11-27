@@ -4,11 +4,12 @@
       <p>
         <img
           src="@/assets/images/logo_crypton.png"
-          alt="Hatsune Miku">
+          alt="Crypton">
       </p>
       <a href="https://piapro.jp/license/pcl/summary" target="_blank">
         <img
-          src="@/assets/images/logo_piapro.svg.png">
+          src="@/assets/images/logo_piapro.svg.png"
+          alt="piapro">
       </a>
     </div>
     <div class="copyright">
