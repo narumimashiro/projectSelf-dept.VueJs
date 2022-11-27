@@ -20,8 +20,11 @@
           <a href="https://genshin.hoyoverse.com/ja" target="_blank">Genshin</a>
         </li>
         <li>
-          <a href="https://playvalorant.com/ja-jp/?utm_source=riotbar&utm_medium=productcard%2Bplayvalorant.com&utm_campaign=val&utm_content=ep5act1"
-            target="_blank">Valorant</a>
+          <a
+            href="https://playvalorant.com/ja-jp/?utm_source=riotbar&utm_medium=productcard%2Bplayvalorant.com&utm_campaign=val&utm_content=ep5act1"
+            target="_blank"
+            >Valorant</a
+          >
         </li>
       </div>
     </nav>
@@ -34,7 +37,7 @@ export default {};
 
 <style lang="scss">
 @mixin sel-list($color: #000) {
-  color : $color;
+  color: $color;
 }
 
 %list-style {
@@ -53,7 +56,7 @@ export default {};
       text-decoration: underline;
       text-decoration-style: dotted;
       text-decoration-color: #302833;
-      text-decoration-thickness: .1em;
+      text-decoration-thickness: 0.1em;
     }
   }
 }
@@ -70,28 +73,27 @@ export default {};
   }
 }
 
-.nav-cont{
+.nav-cont {
   text-align: right;
   li {
     @extend %list-style;
     padding-left: 2ex;
   }
   li:nth-of-type(1) a {
-    @include sel-list(#99ffff)
+    @include sel-list(#99ffff);
   }
   li:nth-of-type(2) a {
-    @include sel-list(#99ff99)
+    @include sel-list(#99ff99);
   }
   li:nth-of-type(3) a {
-    @include sel-list(#ccff99)
+    @include sel-list(#ccff99);
   }
   li:nth-of-type(4) a {
-    @include sel-list(#ffff99)
+    @include sel-list(#ffff99);
   }
   li:nth-of-type(5) a {
-    @include sel-list(#ffcc99)
+    @include sel-list(#ffcc99);
   }
   @extend %link-style;
 }
-
 </style>
