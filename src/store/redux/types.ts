@@ -1,4 +1,10 @@
+export type ModalInfo = {
+  message: string
+  width: number,
+  height: number,
+}
 
 export interface ReduxState {
-  loading: boolean,
+  isOpenModal: boolean,
+  modalInfo: ModalInfo,
 }

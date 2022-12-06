@@ -1,8 +1,12 @@
 import { MutationTree } from 'vuex'
-import { ReduxState } from './types'
+import { ReduxState, ModalInfo, } from './types'
 
 export const mutations: MutationTree<ReduxState> = {
-  setLoading(state, payload: boolean) {
-    state.loading = payload
+  setModalInfo: (state, params: ModalInfo) => {
+    state.isOpenModal = true
+    state.modalInfo = params
+  },
+  closeModal: (state) => {
+    state.isOpenModal = false
   }
 }

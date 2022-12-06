@@ -6,7 +6,8 @@ import { RootState } from '../types'
 import { ReduxState } from './types'
 
 export const state: ReduxState = {
-  loading: false,
+  isOpenModal: false,
+  modalInfo: {message: '', width: 390, height: 260},
 }
 
 const namespaced = true
