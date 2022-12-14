@@ -1,8 +1,16 @@
 <template>
-  <transition apper name="fade" tag="div">
-    <div class="modal-overlay" @click.self="$emit('close')">
+  <transition apper name="modal" tag="div">
+    <div class="modal-overlay" @click.self="closeModal">
       <div class="message-box" :style="{width: boxWidth + 'px', height: boxHeight + 'px'}" >
-        <p>{{ message }}</p>
+        <header class="message-box-header">
+          <p><span>{{ message }}</span></p>
+        </header>
+        <section class="message-box-body">
+
+        </section>
+        <footer class="message-box-footer">
+
+        </footer>
       </div>
     </div>
   </transition>
@@ -31,38 +39,55 @@ export default Vue.extend({
     this.boxWidth = modalInfo.width
     this.boxHeight = modalInfo.height
   },
+  methods: {
+    closeModal: function() {
+      this.$store.dispatch('Redux/setModalInfo', false)
+    },
+  }
 })
 </script>
 
-<style lang="scss">
-.modal-overlay {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  z-index: 30;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-.message-box {
-  background-color: red;
-}
+<style lang="sass">
+.modal-overlay
+  display: flex
+  align-items: center
+  justify-content: center
+  position: fixed
+  z-index: 30
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.5)
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 1.39s;
-  .message-box {
+.message-box
+  background-color: #FFF
+
+.message-box-header
+  height: 15%
+  p
+    height: 100%
+    margin: 0 auto 0 auto
+    span
+      position: relative
+      margin: auto
+
+.message-box-body
+  background: blue
+
+.message-box-color
+  height: 15%
+  backgroud: #86cecb
+
+.modal-enter-active,
+.modal-leave-active
+  transition: opacity .96s
+  .message-box
     transition: opacity .39s, transform .6s
-  }
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-  .message-box {
-    opacity: 0;
-    transform: translateY(-39px);
-  }
-}
+
+.modal-enter, .modal-leave-to
+  opacity: 0
+  .message-box
+    opacity: 0
+    transform: translateY(-39px)
 </style>

@@ -2,15 +2,18 @@
   <div id="app">
     <nav-bar />
     <router-view/>
+    <modal-window v-if="$store.getters['Redux/getModalOpen']"/>
   </div>
 </template>
 
 <script lang="ts">
 import NavBar from '@/components/layouts/NavBar.vue';
+import ModalWindow from '@/components/layouts/ModalWindow.vue'
 
 export default {
   components: {
     NavBar,
+    ModalWindow,
   }
 }
 </script>
