@@ -1,4 +1,4 @@
-# ***Repository for Self Learning (￣△￣\*)***   included `Vue.Js` / `TypeScript` / `SCSS`
+# shiro
 
 ## Project setup
 ```
